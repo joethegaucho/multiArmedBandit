@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eval</title>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+    </head>
+    <body>
+        <div id="container" style="height: 600px"></div>
+        <script>
+            async function main() {
+                const epsilonGreedyResponse = await fetch("http://localhost:8080/data/epsilongreedy");
+                const epsilonGreedyData = await epsilonGreedyResponse.json();
+
+                const epsilonFirstResponse = await fetch("http://localhost:8080/data/epsilonfirst");
+                const epsilonFirstData = await epsilonFirstResponse.json();
+
+                const epsilonDecreasingResponse = await fetch("http://localhost:8080/data/epsilondecreasing");
+                const epsilonDecreasingData = await epsilonDecreasingResponse.json();
+
+                const vDBEBoltzmannResponse = await fetch("http://localhost:8080/data/vdbeboltzmann");
+                const vDBEBoltzmannData = await vDBEBoltzmannResponse.json();
+
+                const softmaxResponse = await fetch("http://localhost:8080/data/softmax");
+                const softmaxData = await softmaxResponse.json();
+
+                Highcharts.chart("container", {
+                    title: {
+                        text: "Agent Evaluation"
+                    },
+                    xAxis: {
+                        categories: [...Array(1000).keys()],
+                        title: {
+                            text: "Steps"
+                        }
+                    },
+                    yAxis: [{
+                        title: {
+                            text: "Average Reward"
+                        }
+                    }],
+                    series: [{
+                        data: epsilonGreedyData.history,
+                        name: epsilonGreedyData.name,
+                        type: 'spline'
+                    }, {
+                        data: epsilonFirstData.history,
+                        name: epsilonFirstData.name,
+                        type: 'spline'
+                    }, {
+                        data: epsilonDecreasingData.history,
+                        name: epsilonDecreasingData.name,
+                        type: 'spline'
+                    }, {
+                        data: vDBEBoltzmannData.history,
+                        name: vDBEBoltzmannData.name,
+                        type: 'spline'
+                    }, {
+                        data: softmaxData.history,
+                        name: softmaxData.name,
+                        type: 'spline'
+                    }]
+
+                });
+            }
+
+        main()
+        </script>  
+        <button onclick="main()">Run Simulation</button>
+    </body>
+</html>
