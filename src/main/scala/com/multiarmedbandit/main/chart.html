@@ -11,17 +11,21 @@
                 const epsilonGreedyResponse = await fetch("http://localhost:8080/data/epsilongreedy");
                 const epsilonGreedyData = await epsilonGreedyResponse.json();
 
-                const epsilonFirstResponse = await fetch("http://localhost:8080/data/epsilonfirst");
-                const epsilonFirstData = await epsilonFirstResponse.json();
-
+                /*
                 const epsilonDecreasingResponse = await fetch("http://localhost:8080/data/epsilondecreasing");
                 const epsilonDecreasingData = await epsilonDecreasingResponse.json();
+                */
+
+                 /*
+                const epsilonFirstResponse = await fetch("http://localhost:8080/data/epsilonfirst");
+                const epsilonFirstData = await epsilonFirstResponse.json();
 
                 const vDBEBoltzmannResponse = await fetch("http://localhost:8080/data/vdbeboltzmann");
                 const vDBEBoltzmannData = await vDBEBoltzmannResponse.json();
 
                 const softmaxResponse = await fetch("http://localhost:8080/data/softmax");
                 const softmaxData = await softmaxResponse.json();
+                */
 
                 Highcharts.chart("container", {
                     title: {
@@ -39,16 +43,16 @@
                         }
                     }],
                     series: [{
-                        data: epsilonGreedyData.history,
+                        data: epsilonGreedyData.results,
                         name: epsilonGreedyData.name,
+                        type: 'spline'
+                    }/*, {
+                        data: epsilonDecreasingData.history,
+                        name: epsilonDecreasingData.name,
                         type: 'spline'
                     }, {
                         data: epsilonFirstData.history,
                         name: epsilonFirstData.name,
-                        type: 'spline'
-                    }, {
-                        data: epsilonDecreasingData.history,
-                        name: epsilonDecreasingData.name,
                         type: 'spline'
                     }, {
                         data: vDBEBoltzmannData.history,
@@ -58,7 +62,7 @@
                         data: softmaxData.history,
                         name: softmaxData.name,
                         type: 'spline'
-                    }]
+                    }*/]
 
                 });
             }
