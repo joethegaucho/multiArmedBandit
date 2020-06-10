@@ -51,3 +51,167 @@ Caused by: java.nio.file.NoSuchFileException: /Users/jmarin/Desktop/multiArmedBa
 	... 16 more
 
 2020.06.09 15:48:42 INFO  skipping build import with status 'Dismissed'
+2020.06.09 15:52:19 INFO  no build target: using presentation compiler with only scala-library
+2020.06.09 15:52:21 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 15:52:45 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 16:22:06 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala' because it doesn't belong to a build target.
+2020.06.09 16:22:06 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 17:19:34 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 17:24:33 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala' because it doesn't belong to a build target.
+2020.06.09 17:24:33 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+Jun 09, 2020 5:25:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 54
+2020.06.09 17:25:58 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 17:27:28 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Utils.scala
+2020.06.09 17:27:28 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:29:09 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:29:20 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:29:49 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:30:48 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:31:05 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:31:15 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:31:18 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:31:24 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:34:25 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 17:34:46 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 17:34:51 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:36:21 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:36:50 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:41:55 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:42:24 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:43:07 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 17:43:25 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala' because it doesn't belong to a build target.
+2020.06.09 17:44:02 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 17:44:06 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 17:45:44 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 17:46:02 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 17:46:02 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala' because it doesn't belong to a build target.
+Jun 09, 2020 5:47:16 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: String index out of range: -2
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.<init>(String.java:196)
+	at scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1230)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1253)
+	at scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:369)
+	at scala.Option.map(Option.scala:230)
+	at scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:368)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:197)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:305)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:300)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:269)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:26)
+
+2020.06.09 17:47:21 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 17:47:24 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala' because it doesn't belong to a build target.
+2020.06.09 17:47:31 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala' because it doesn't belong to a build target.
+2020.06.09 17:47:31 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 17:47:43 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 17:47:54 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 17:48:56 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+something's wrong: no file:///Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala in List[simulation.Simulation.Action]RangePosition(file:///Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala, 913, 913, 925)
+2020.06.09 17:50:19 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:50:32 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:51:27 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 17:54:35 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:54:48 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:54:55 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 17:55:11 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+Jun 09, 2020 5:56:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1347
+Jun 09, 2020 5:56:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1408
+2020.06.09 17:57:33 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:00:21 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:00:50 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:00:58 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:01:21 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:01:35 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:02:25 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:13:38 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:17:57 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:18:45 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:18:52 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:18:52 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:18:52 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:18:52 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:18:55 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:18:55 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:18:58 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:18:58 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:19:29 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:19:29 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:19:29 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:19:48 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:20:13 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala' because it doesn't belong to a build target.
+2020.06.09 18:20:13 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala' because it doesn't belong to a build target.
+2020.06.09 18:20:46 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:20:46 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:20:46 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:20:50 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:20:50 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:21:51 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:21:51 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:24:08 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:24:08 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:24:10 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:34:56 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 18:35:11 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 18:35:16 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala' because it doesn't belong to a build target.
+2020.06.09 18:40:11 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala' because it doesn't belong to a build target.
+2020.06.09 18:40:11 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala' because it doesn't belong to a build target.
+2020.06.09 18:41:01 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 18:41:08 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala' because it doesn't belong to a build target.
+2020.06.09 18:41:28 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:41:46 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 18:41:46 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala' because it doesn't belong to a build target.
+2020.06.09 18:42:07 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 18:43:38 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:43:53 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala' because it doesn't belong to a build target.
+2020.06.09 18:43:53 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 18:44:31 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:45:20 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 18:45:46 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 18:45:53 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/scripts/multiArmedBandit.sc' because it doesn't belong to a build target.
+2020.06.09 18:46:11 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala' because it doesn't belong to a build target.
+2020.06.09 18:46:11 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:46:21 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:46:36 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Simulation.scala
+2020.06.09 18:46:58 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala' because it doesn't belong to a build target.
+2020.06.09 18:46:58 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 18:46:58 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala' because it doesn't belong to a build target.
+2020.06.09 18:47:25 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 18:47:37 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 18:47:40 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+Jun 09, 2020 6:48:04 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: String index out of range: -2
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.<init>(String.java:196)
+	at scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1230)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1253)
+	at scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:369)
+	at scala.Option.map(Option.scala:230)
+	at scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:368)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:197)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:305)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:300)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:269)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:26)
+
+2020.06.09 18:48:09 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 18:48:15 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala' because it doesn't belong to a build target.
+2020.06.09 18:48:25 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 18:49:32 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Agent.scala
+2020.06.09 18:50:19 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 18:51:42 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 18:59:17 WARN  no build target for: /Users/jmarin/multiArmedBandit/multiarmedbandit/src/main/scala/main.scala
+2020.06.09 18:59:57 WARN  no build target for: /Users/jmarin/multiArmedBandit3/multiarmedbandit/src/main/scala/com/multiarmedbandit/main/main.scala
+2020.06.09 19:00:07 WARN  code navigation does not work for the file '/Users/jmarin/multiArmedBandit3/multiarmedbandit/src/main/scala/com/multiarmedbandit/main/main.scala' because it doesn't belong to a build target.
+2020.06.09 19:00:25 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 19:00:26 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 19:02:55 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 19:03:31 WARN  no build target for: /Users/jmarin/multiArmedBandit3/multiarmedbandit/src/main/scala/com/multiarmedbandit/main/main.scala
+2020.06.09 19:06:11 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 19:06:14 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 19:06:56 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 19:07:13 WARN  no build target for: /Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala
+2020.06.09 19:27:37 WARN  code navigation does not work for the file '/Users/jmarin/Desktop/multiArmedBandit/src/main/scala/com/multiarmedbandit/main/Main.scala' because it doesn't belong to a build target.

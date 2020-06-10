@@ -21,7 +21,7 @@ object Simulation {
 
     case class Action(lever: Lever)
 
-    case class State(levers: List[Lever], actionSpace: List[Action], history: Map[Action, List[Reward]])
+    case class State(levers: List[Lever], actionSpace: List[Action], history: Map[Action, List[Reward]], time: Int = 1, numTrials: Int = 0)
 
     type ActionValues = Map[Action, Double]
 
@@ -29,9 +29,17 @@ object Simulation {
 
     def initializeActionSpace(levers: List[Lever]): List[Action] = levers.map(lever => Action(lever))
 
-    def initializeState(levers: List[Lever], actionSpace: List[Action]): State = {
+    def initializeState(levers: List[Lever], actionSpace: List[Action], numTrials: Int): State = {
         val emptyHistory = (actionSpace zip List.fill(actionSpace.length)(List[Reward]())).toMap 
-        State(levers, actionSpace, emptyHistory)
+        State(levers, actionSpace, emptyHistory, numTrials = numTrials)
+    }
+
+    def updateAgent(agent: Agent): Agent = {
+        agent match {
+            case EpsilonGreedyAgent(_) => agent
+            case EpsilonFirstAgent(_) => agent
+            case EpsilonDecreasingAgent(_) => EpsilonDecreasingAgent(agent.epsilon/2)
+        }
     }
 
     def runSimulation(agent: Agent, numTrials: Int): Result = {
@@ -40,9 +48,9 @@ object Simulation {
         val actionSpace = initializeActionSpace(levers)
         
         @tailrec
-        def runTrial(agent: Agent, state: State = initializeState(levers, actionSpace), currentTrial: Int = 1): Result = {
+        def runTrial(agent: Agent, state: State = initializeState(levers, actionSpace, numTrials = numTrials)): Result = {
         
-            if(currentTrial == numTrials){
+            if(state.time == numTrials){
         
                 Result(agent.getClass.getName, getMovingAverage(state.history.values.toList.flatten))
 
@@ -52,19 +60,21 @@ object Simulation {
                 val action = agent.policy(state)
                 val reward = action.lever.pull() 
                 
-                val newState = State(levers,
-                actionSpace,
-                if(state.history.contains(action)) state.history + (action -> (state.history(action) ::: List(reward))) else state.history + (action -> List(reward))
+                val newState = State(
+                    levers,
+                    actionSpace,
+                    if(state.history.contains(action)) state.history + (action -> (state.history(action) ::: List(reward))) else state.history + (action -> List(reward)),
+                    state.time + 1,
+                    numTrials
                 )
 
-                runTrial(agent, newState, currentTrial = currentTrial + 1)
+                runTrial(updateAgent(agent), newState)
 
             }
         }
 
         runTrial(agent)
 
-}
-
+    }   
 
 }

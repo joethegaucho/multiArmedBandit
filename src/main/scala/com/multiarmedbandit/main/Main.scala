@@ -17,10 +17,16 @@ import com.multiarmedbandit.model.{Result}
 object Main extends App {
 
   val epsilonGreedyAgent = EpsilonGreedyAgent(0.1)
+  val epsilonFirstAgent = EpsilonFirstAgent(0.1)
+  val epsilonDecreasingAgent = EpsilonDecreasingAgent(1.0)
 
   val epsilonGreedyReward = runSimulation(epsilonGreedyAgent, 1000)
+  val epsilonFirstReward = runSimulation(epsilonFirstAgent, 1000)
+  val epsilonDecreasingReward = runSimulation(epsilonDecreasingAgent, 1000)
 
-  println(s"Epsilon Greedy score ${epsilonGreedyReward.results.sum}")
+  println(s"Epsilon Greedy score     : ${epsilonGreedyReward.results.sum}")
+  println(s"Epsilon First score      : ${epsilonFirstReward.results.sum}")
+  println(s"Epsilon Decreasing score : ${epsilonDecreasingReward.results.sum}")
 
   implicit val system: ActorSystem = ActorSystem("Main")
   implicit val materializer: ActorMaterializer = ActorMaterializer()
@@ -30,9 +36,19 @@ object Main extends App {
       path("epsilongreedy"){
         get {
           complete(epsilonGreedyReward)
-        } 
-      } 
-    }
+        }
+      } ~
+      path("epsilonfirst"){
+        get {
+          complete(epsilonFirstReward)
+        }
+      } ~
+      path("epsilondecreasing"){
+        get {
+          complete(epsilonDecreasingReward)
+        }
+      }
+    } 
   }
 
   Http().bindAndHandle(routes, "localhost", 8080)
