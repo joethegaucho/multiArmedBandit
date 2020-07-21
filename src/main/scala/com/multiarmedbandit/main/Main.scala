@@ -19,36 +19,44 @@ object Main extends App {
   val epsilonGreedyAgent = EpsilonGreedyAgent(0.1)
   val epsilonFirstAgent = EpsilonFirstAgent(0.1)
   val epsilonDecreasingAgent = EpsilonDecreasingAgent(1.0)
+  val vdbeBoltzmannAgent = VDBEBoltzmannAgent(1.0, 0.33)
 
   val epsilonGreedyReward = runSimulation(epsilonGreedyAgent, 1000)
   val epsilonFirstReward = runSimulation(epsilonFirstAgent, 1000)
   val epsilonDecreasingReward = runSimulation(epsilonDecreasingAgent, 1000)
+  val vdbeBoltzmannReward = runSimulation(vdbeBoltzmannAgent, 1000)
 
   println(s"Epsilon Greedy score     : ${epsilonGreedyReward.results.sum}")
   println(s"Epsilon First score      : ${epsilonFirstReward.results.sum}")
   println(s"Epsilon Decreasing score : ${epsilonDecreasingReward.results.sum}")
+  println(s"VDBE Boltzmann score     : ${vdbeBoltzmannReward.results.sum}")
 
   implicit val system: ActorSystem = ActorSystem("Main")
   implicit val materializer: ActorMaterializer = ActorMaterializer()
 
   val routes: Route = cors() {
     pathPrefix("data") {
-      path("epsilongreedy"){
+      path("epsilongreedy") {
         get {
           complete(epsilonGreedyReward)
         }
       } ~
-      path("epsilonfirst"){
-        get {
-          complete(epsilonFirstReward)
+        path("epsilonfirst") {
+          get {
+            complete(epsilonFirstReward)
+          }
+        } ~
+        path("epsilondecreasing") {
+          get {
+            complete(epsilonDecreasingReward)
+          }
+        } ~
+        path("vdbeboltzmann") {
+          get {
+            complete(vdbeBoltzmannReward)
+          }
         }
-      } ~
-      path("epsilondecreasing"){
-        get {
-          complete(epsilonDecreasingReward)
-        }
-      }
-    } 
+    }
   }
 
   Http().bindAndHandle(routes, "localhost", 8080)

@@ -13,14 +13,14 @@
 
                 const epsilonFirstResponse = await fetch("http://localhost:8080/data/epsilonfirst");
                 const epsilonFirstData = await epsilonFirstResponse.json();
-                
+
                 const epsilonDecreasingResponse = await fetch("http://localhost:8080/data/epsilondecreasing");
                 const epsilonDecreasingData = await epsilonDecreasingResponse.json();
 
-                /*
                 const vDBEBoltzmannResponse = await fetch("http://localhost:8080/data/vdbeboltzmann");
                 const vDBEBoltzmannData = await vDBEBoltzmannResponse.json();
 
+                /*
                 const softmaxResponse = await fetch("http://localhost:8080/data/softmax");
                 const softmaxData = await softmaxResponse.json();
                 */
@@ -35,28 +35,36 @@
                             text: "Steps"
                         }
                     },
-                    yAxis: [{
-                        title: {
-                            text: "Average Reward"
+                    yAxis: [
+                        {
+                            title: {
+                                text: "Average Reward"
+                            }
                         }
-                    }],
-                    series: [{
-                        data: epsilonGreedyData.results,
-                        name: epsilonGreedyData.name,
-                        type: 'spline'
-                    }, {
-                        data: epsilonFirstData.results,
-                        name: epsilonFirstData.name,
-                        type: 'spline'
-                    }, {
-                        data: epsilonDecreasingData.results,
-                        name: epsilonDecreasingData.name,
-                        type: 'spline'
-                    }]
+                    ],
+                    series: [
+                        {
+                            data: epsilonGreedyData.results,
+                            name: "Epsilon Greedy",
+                            type: 'spline'
+                        }, {
+                            data: epsilonFirstData.results,
+                            name: "Epsilon First",
+                            type: 'spline'
+                        }, {
+                            data: epsilonDecreasingData.results,
+                            name: "Epsilon Decreasing",
+                            type: 'spline'
+                        }, {
+                            data: vDBEBoltzmannData.results,
+                            name: "VDBE Boltzmann",
+                            type: 'spline'
+                        }
+                    ]
                 });
             }
-        main()
-        </script>  
+            main()
+        </script>
         <button onclick="main()">Run Simulation</button>
     </body>
 </html>

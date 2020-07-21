@@ -9,6 +9,8 @@ case class Result(agent: String, results: List[Reward])
 
 object Result {
 
-    implicit val resultJsonFormat: RootJsonFormat[Result] = jsonFormat2(Result.apply)
-    
+  implicit val resultJsonFormat: RootJsonFormat[Result] = jsonFormat2(
+    Result.apply
+  )
+
 }
