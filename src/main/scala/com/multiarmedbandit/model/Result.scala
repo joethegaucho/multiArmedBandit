@@ -5,7 +5,7 @@ import spray.json.RootJsonFormat
 import agents._
 import simulation.Simulation._
 
-case class Result(agent: String, results: List[Reward])
+case class Result(agent: String, results: List[Double])
 
 object Result {
 

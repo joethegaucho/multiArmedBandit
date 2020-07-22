@@ -4,19 +4,12 @@ import simulation.Simulation._
 import utils.Utils._
 import math._
 import util.control.Breaks._
+import scala.collection.immutable.ListMap
 
 sealed trait Agent {
 
   def policy(state: State): Action
-
-  def evaluateActions(
-      actionValueMethod: State => ActionValues,
-      state: State
-  ): ActionValues = actionValueMethod(state)
-
   def updateAgent(state: State): Agent
-
-  def epsilon: Double
 
 }
 
@@ -68,7 +61,7 @@ final case class EpsilonDecreasingAgent(val epsilon: Double) extends Agent {
   }
 
   def updateAgent(state: State) = {
-    val newEpsilon = this.epsilon / 2
+    val newEpsilon = 1.0 / state.time
     EpsilonDecreasingAgent(newEpsilon)
   }
 
@@ -95,10 +88,11 @@ final case class VDBEBoltzmannAgent(
     if (state.history.isEmpty) {
       0
     } else {
+
       val previousAction = state.history.last._1
       val previousReward = state.history.last._2
 
-      val stepSizeParameter = 1 / (1 + state.history
+      val stepSizeParameter = 1.0 / (1 + state.history
         .groupBy(action => action._1)(previousAction)
         .length)
 
@@ -106,10 +100,11 @@ final case class VDBEBoltzmannAgent(
         previousReward - evaluateActions(mean, state)(previousAction)
 
       val eTerm = exp(
-        -1.0 * abs(
+        -1.0 * (abs(
           stepSizeParameter * temporalDifferenceError
-        ) / this.inverseSensitivity
+        ) / inverseSensitivity)
       )
+
       val numerator = 1.0 - eTerm
       val denominator = 1.0 + eTerm
 
@@ -123,12 +118,71 @@ final case class VDBEBoltzmannAgent(
       VDBEBoltzmannAgent(epsilon, inverseSensitivity)
     }
 
-    val delta = 1 / state.actionSpace.length
+    val delta = 1.0 / state.actionSpace.length
     val newEpsilon =
-      delta * getTemporalDifferenceWeight(state) + (1 - delta) * this.epsilon
+      (delta * getTemporalDifferenceWeight(state)) + ((1 - delta) * epsilon)
 
     VDBEBoltzmannAgent(newEpsilon, inverseSensitivity)
 
   }
+
+}
+
+final case class SoftMaxAgent(temperature: Double) extends Agent {
+
+  def policy(state: State): Action = {
+    if (state.history.length <= 1) {
+      state.actionSpace(scala.util.Random.nextInt(state.actionSpace.length))
+    } else {
+
+      val actionProbabilities = convertActionValuesToActionProbabilities(
+        getActionValueEstimates(mean, state)
+      )
+
+      chooseProbabilisticAction(actionProbabilities)
+
+    }
+  }
+
+  def convertActionValuesToActionProbabilities(
+      actionValueEstimates: ActionValueEstimates
+  ): ActionProbabilities = {
+
+    actionValueEstimates.view
+      .mapValues(x =>
+        (exp(x / temperature)) / (actionValueEstimates.view
+          .mapValues(y => exp(y / temperature))
+          .toMap
+          .values
+          .sum)
+      )
+      .toMap
+
+  }
+
+  def chooseProbabilisticAction(
+      actionProbabilities: ActionProbabilities
+  ): Action = {
+
+    val sortedActionProbabilities = ListMap(
+      actionProbabilities.toSeq.sortBy(_._2): _*
+    )
+    val cumulativeActionProbabilities = getCumulativeSum(
+      sortedActionProbabilities.toList.map(x => x._2)
+    )
+    val roll = util.Random.nextDouble()
+
+    sortedActionProbabilities
+      .take(
+        cumulativeActionProbabilities
+          .indexOf(
+            cumulativeActionProbabilities.filter(x => x > roll).head
+          ) + 1
+      )
+      .last
+      ._1
+  }
+
+  def updateAgent(state: State) = SoftMaxAgent(temperature)
 
 }

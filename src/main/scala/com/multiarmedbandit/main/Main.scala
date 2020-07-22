@@ -20,16 +20,20 @@ object Main extends App {
   val epsilonFirstAgent = EpsilonFirstAgent(0.1)
   val epsilonDecreasingAgent = EpsilonDecreasingAgent(1.0)
   val vdbeBoltzmannAgent = VDBEBoltzmannAgent(1.0, 0.33)
+  val softMaxAgent = SoftMaxAgent(0.5)
 
-  val epsilonGreedyReward = runSimulation(epsilonGreedyAgent, 1000)
-  val epsilonFirstReward = runSimulation(epsilonFirstAgent, 1000)
-  val epsilonDecreasingReward = runSimulation(epsilonDecreasingAgent, 1000)
-  val vdbeBoltzmannReward = runSimulation(vdbeBoltzmannAgent, 1000)
+  val epsilonGreedyReward = runSimulation(epsilonGreedyAgent, 100, 1000)
+  val epsilonFirstReward = runSimulation(epsilonFirstAgent, 100, 1000)
+  val epsilonDecreasingReward =
+    runSimulation(epsilonDecreasingAgent, 100, 1000)
+  val vdbeBoltzmannReward = runSimulation(vdbeBoltzmannAgent, 100, 1000)
+  val softMaxReward = runSimulation(softMaxAgent, 100, 1000)
 
   println(s"Epsilon Greedy score     : ${epsilonGreedyReward.results.sum}")
   println(s"Epsilon First score      : ${epsilonFirstReward.results.sum}")
   println(s"Epsilon Decreasing score : ${epsilonDecreasingReward.results.sum}")
   println(s"VDBE Boltzmann score     : ${vdbeBoltzmannReward.results.sum}")
+  println(s"Softmax score          : ${softMaxReward.results.sum}")
 
   implicit val system: ActorSystem = ActorSystem("Main")
   implicit val materializer: ActorMaterializer = ActorMaterializer()
@@ -54,6 +58,11 @@ object Main extends App {
         path("vdbeboltzmann") {
           get {
             complete(vdbeBoltzmannReward)
+          }
+        } ~
+        path("softmax") {
+          get {
+            complete(softMaxReward)
           }
         }
     }

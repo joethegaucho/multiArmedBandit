@@ -31,6 +31,8 @@ object Simulation {
   )
 
   type ActionValues = Map[Action, Reward]
+  type ActionValueEstimates = Map[Action, Reward]
+  type ActionProbabilities = Map[Action, Double]
 
   def initializeLevers(numLevers: Int): List[Lever] =
     List.tabulate(numLevers)(id => Lever(id.toString))
@@ -46,24 +48,17 @@ object Simulation {
     State(levers, actionSpace, List[(Action, Reward)](), numTrials = numTrials)
   }
 
-  def runSimulation(agent: Agent, numTrials: Int): Result = {
-
-    val levers = initializeLevers(10)
-    val actionSpace = initializeActionSpace(levers)
+  def runSimulation(agent: Agent, numRuns: Int, numTrials: Int): Result = {
 
     @tailrec
     def runTrial(
         agent: Agent,
-        state: State =
-          initializeState(levers, actionSpace, numTrials = numTrials)
-    ): Result = {
+        state: State
+    ): List[Reward] = {
 
       if (state.time == numTrials) {
 
-        Result(
-          agent.getClass.getName,
-          getMovingAverage(state.history.map(reward => reward._2))
-        )
+        state.history.map(reward => reward._2)
 
       } else {
 
@@ -71,8 +66,8 @@ object Simulation {
         val reward = action.lever.pull()
 
         val successorState = State(
-          levers,
-          actionSpace,
+          state.levers,
+          state.actionSpace,
           state.history :+ (action, reward),
           state.time + 1,
           numTrials
@@ -85,7 +80,20 @@ object Simulation {
       }
     }
 
-    runTrial(agent)
+    val runs = for (run <- 1 to numRuns) yield {
+
+      val levers = initializeLevers(10)
+      val actionSpace = initializeActionSpace(levers)
+      runTrial(agent, initializeState(levers, actionSpace, numTrials))
+
+    }
+
+    Result(
+      agent.getClass.getName,
+      getMovingAverage(
+        runs.transpose.map(result => result.sum / result.length).toList
+      ).toList
+    )
 
   }
 
